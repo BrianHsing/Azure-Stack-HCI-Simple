@@ -8,11 +8,15 @@
  您大約需要花費 ?? 分鐘完成此 Lab，預計花費 $$ 元，透過手把手教學您將學會：<br>
  - 學會在 Azure 模擬內部部署 Azure Stack HCI 環境<br>
  - 學會操作 Windows Admin Center 來管理您的 Azure Stack HCI 叢集<br>
- - 學會 Azure Arc 與 Azure Stack HCI 整合設定與監控<br>
+ - 學會 Azure Arc 與 Azure Stack HCI 整合設定、更新與監控<br>
  - 學會啟用額外的 Azure 混合式服務<br>
 
 ## 環境架構說明
  - 您要使用本篇實戰演練需要：<br>
    - Azure 訂用帳戶、Azure 訂用帳戶擁有者權限<br>
    - 有基本的 Powershell 使用經驗<br>
- - 本篇需要使用 Azure VM 巢狀虛擬化來模擬
+ - 需要使用 Azure 虛擬機器巢狀虛擬化來模擬，稍後可以遵循 Lab 透過撰寫好的 ps1 檔直接執行佈署，或者您也可以直接建立<br>
+ - Azure 虛擬機器建立完成後，主要會在 Hyper-V 中建立 4 台虛擬機器，第一台角色負責網域控制站(hci.lab)與 DHCP Server，第二台角色負責 Windows Admin Center 閘道作為後續管理 Azure Stack HCI 統一管理介面，另外兩台角色為 Azure Stack HCI 主機，這兩台主機特別要注意的是，必須要啟用巢狀虛擬化以及 MAC Address Spoofing，才能順利地在 Azure Stack HCI 叢集上建立虛擬機器以及在第二層虛擬網路交換器之間順利地路由。<br>
+![]()<br>
+
+##
