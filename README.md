@@ -17,6 +17,6 @@
    - 有基本的 Powershell 使用經驗<br>
  - 需要使用 Azure 虛擬機器巢狀虛擬化來模擬，稍後可以遵循 Lab 透過撰寫好的 ps1 檔直接執行佈署，或者您也可以直接建立<br>
  - Azure 虛擬機器建立完成後，主要會在 Hyper-V 中建立 4 台虛擬機器，第一台角色負責網域控制站(hci.lab)與 DHCP Server，第二台角色負責 Windows Admin Center 閘道作為後續管理 Azure Stack HCI 統一管理介面，另外兩台角色為 Azure Stack HCI 主機，這兩台主機特別要注意的是，必須要啟用巢狀虛擬化以及 MAC Address Spoofing，才能順利地在 Azure Stack HCI 叢集上建立虛擬機器以及在第二層虛擬網路交換器之間順利地路由。<br>
-![]()<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/AzSHCI-architecture.png)<br>
 
 ##
