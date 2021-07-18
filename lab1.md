@@ -83,3 +83,42 @@
     https://azure.microsoft.com/zh-tw/products/azure-stack/hci/hci-download/<br>
   - 提供一下必要資訊後，請下載 Azure Stack HCI & Windows admin Center <br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell5.png "CloudShell5")<br>
+  - 開啟 AzSHCI 的 Windows PowerShell ISE<br>
+  - 建立虛擬網路交換器<br>
+  ````
+    #建立虛擬網路交換器
+    New-VMSwitch -Name "vSwitch" -SwitchType Internal
+    $adapter = Get-NetAdapter -Name "vEthernet (vSwitch)"
+    New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex $adapter.InterfaceIndex
+    New-NetNat -Name "InternalNat" -InternalIPInterfaceAddressPrefix 192.168.0.0/24
+  ````
+  - 掛載資料磁碟<br>
+  ````
+    #掛載資料磁碟
+    Get-Disk | Where partitionstyle -eq 'raw' | `
+    Initialize-Disk -PartitionStyle GPT  -PassThru | `
+    New-Partition -AssignDriveLetter -UseMaximumSize | `
+    Format-Volume -FileSystem NTFS -NewFileSystemLabel "DataDisk" -Confirm:$false
+  ````
+  - 建立 4 台虛擬主機角色<br>
+    - ADDS 負責網域控制站、DHCP Server<br>
+      - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.4<br>
+    - WAC 負責 Windows Admin Center 匣道<br>
+      - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.5<br>
+    - AzSHCI-node1 主機<br>
+      - 4 vCPU、32768 MB RAM
+      - Ethernet 192.168.0.11、Ethernet 2 192.168.0.12、Ethernet 3 192.168.0.13
+      - 
+    - AzSHCI-node2 主機<br>
+  - 啟用 Hyper-V VM 巢狀虛擬化<br>
+  ````
+    # 啟用 Hyper-V VM 巢狀虛擬化
+    Set-VMProcessor -VMName AzSHCI-node1 -ExposeVirtualizationExtensions $true
+    Set-VMProcessor -VMName AzSHCI-node2 -ExposeVirtualizationExtensions $true
+  ````
+  - 逐項更改 AzSHCI-node1、AzSHCI-node2 網路卡設定
+  ````
+    # CMD 更改 AzSHCI 網路卡設定靜態IP、DNS
+    netsh interface ip set address "Ethernet 4" static 192.168.0.14 255.255.255.0 192.168.0.1
+    netsh interface ip set dnsserver "Ethernet 4" static 192.168.0.4
+  ````
