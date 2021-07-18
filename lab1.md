@@ -119,9 +119,4 @@
     Set-VMProcessor -VMName AzSHCI-node1 -ExposeVirtualizationExtensions $true
     Set-VMProcessor -VMName AzSHCI-node2 -ExposeVirtualizationExtensions $true
   ````
-  - 逐項更改 AzSHCI-node1、AzSHCI-node2 網路卡設定
-  ````
-    # CMD 更改 AzSHCI 網路卡設定靜態IP、DNS
-    netsh interface ip set address "Ethernet 4" static 192.168.0.14 255.255.255.0 192.168.0.1
-    netsh interface ip set dnsserver "Ethernet 4" static 192.168.0.4
-  ````
+  前往[Lab2 - 佈署 Azure Stack HCI OS]()<br>
