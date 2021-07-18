@@ -108,15 +108,28 @@
       - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.4<br>
     - WAC 負責 Windows Admin Center 匣道<br>
       - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.5<br>
-    - AzSHCI-node1 主機<br>
+    - AzSHCI-node1 / AzSHCI-node2 主機<br>
       - 4 vCPU、32768 MB RAM<br>
       - 掛載 2 個 128 GB VHD<br>
+        - 選擇 SCSI Controller，點選 Hard Drive，點選 Add<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v4.png "hyper-v4")<br>
+        - 點選 New<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v5.png "hyper-v5")<br>
+        - 進入到新增虛擬硬碟精靈，點選下一步<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v6.png "hyper-v6")<br>
+        - 預設選擇為 VHDX，選點下一步<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v7.png "hyper-v7")<br>
+        - 選擇 Fixed size 初始化固定大小的虛擬磁碟<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v8.png "hyper-v8")<br>
+        - 輸入硬碟名稱，例如 node1-ssd1、node1-ssd2、node2-ssd1、node2-ssd2，點選下一步<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v9.png "hyper-v9")<br>
+        - 預設容量為 127 GB，點選下一步<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v10.png "hyper-v10")<br>
+        - 點選 Finish，並等待硬碟建立<br>
+        ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v11.png "hyper-v11")<br>
       - 3 個 Network Adapter，均與 vSwitch 連接，每張網開均需要開啟 Mac Address Spoofing<br>
       ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v3.png "hyper-v3")<br>
-    - AzSHCI-node2 主機<br>
-      - 4 vCPU、32768 MB RAM<br>
-      - 掛載 2 個 128 GB VHD<br>
-      - 3 個 Network Adapter，均與 vSwitch 連接，每張網開均需要開啟 Mac Address Spoofing<br>
+
   - 啟用 Hyper-V VM 巢狀虛擬化<br>
   ````
     # 啟用 Hyper-V VM 巢狀虛擬化
