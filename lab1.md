@@ -18,9 +18,9 @@
     -ResourceGroupName $resourceGroup `
     -Location $location `
     -Name $vmName-Vnet `
-    -AddressPrefix 172.16.0.0/16 `
+    -AddressPrefix 172.16.0.0/16 
     $subnetWorkload = Add-AzVirtualNetworkSubnetConfig `
-    -Name Workload-Subnet `
+    -Name "Workload-Subnet" `
     -AddressPrefix 172.16.1.0/24 `
     -VirtualNetwork $virtualNetwork
     $virtualNetwork | Set-AzVirtualNetwork
@@ -72,3 +72,14 @@
     - 輸入`Connect-AzAccount -UseDeviceAuthentication` 登入，上傳 AzSHCI-Hyper-V.ps1<br>
 	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell4.png "CloudShell4")<br>
 	- 輸入並執行 `./AzSHCI-Hyper-V.ps1` <br>
+
+## 設定 Hyper-V 與建立虛擬機器
+
+- 安裝前置作業<br>
+  - 下載 Windows Server 2019 評估版<br>
+    https://www.microsoft.com/zh-tw/evalcenter/evaluate-windows-server-2019<br>
+    ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell6.png "CloudShell6")<br>
+  - 下載 Azure Stack HCI & Windows admin Center <br>
+    https://azure.microsoft.com/zh-tw/products/azure-stack/hci/hci-download/<br>
+  - 提供一下必要資訊後，請下載 Azure Stack HCI & Windows admin Center <br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell5.png "CloudShell5")<br>

@@ -8,10 +8,10 @@ New-AzResourceGroup -Name $resourceGroup -Location $location
 
 #建立虛擬網路
 $virtualNetwork = New-AzVirtualNetwork `
-  -ResourceGroupName $resourceGroup `
-  -Location $location `
-  -Name $vmName-Vnet `
-  -AddressPrefix 172.16.0.0/16 `
+-ResourceGroupName $resourceGroup `
+-Location $location `
+-Name $vmName-Vnet `
+-AddressPrefix 172.16.0.0/16 
 $subnetWorkload = Add-AzVirtualNetworkSubnetConfig `
 -Name "Workload-Subnet" `
 -AddressPrefix 172.16.1.0/24 `
