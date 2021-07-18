@@ -1,5 +1,4 @@
-﻿
-$resourceGroup = "AzSHCI-infra"
+﻿$resourceGroup = "AzSHCI-infra"
 $location = "Southeast Asia"
 $vmName = "AzSHCI-Infra"
 $vmSize = "Standard_E16s_v3"
