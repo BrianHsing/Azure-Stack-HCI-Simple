@@ -13,7 +13,7 @@ $virtualNetwork = New-AzVirtualNetwork `
   -Name $vmName-Vnet `
   -AddressPrefix 172.16.0.0/16 `
 $subnetWorkload = Add-AzVirtualNetworkSubnetConfig `
--Name Workload-Subnet `
+-Name "Workload-Subnet" `
 -AddressPrefix 172.16.1.0/24 `
 -VirtualNetwork $virtualNetwork
 $virtualNetwork | Set-AzVirtualNetwork
