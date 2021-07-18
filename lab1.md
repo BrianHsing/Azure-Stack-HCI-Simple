@@ -106,10 +106,13 @@
     - WAC 負責 Windows Admin Center 匣道<br>
       - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.5<br>
     - AzSHCI-node1 主機<br>
-      - 4 vCPU、32768 MB RAM
-      - Ethernet 192.168.0.11、Ethernet 2 192.168.0.12、Ethernet 3 192.168.0.13
-      - 
+      - 4 vCPU、32768 MB RAM<br>
+      - 掛載 2 個 128 GB VHD<br>
+      - Ethernet 192.168.0.11、Ethernet 2 192.168.0.12、Ethernet 3 192.168.0.13<br>
     - AzSHCI-node2 主機<br>
+      - 4 vCPU、32768 MB RAM<br>
+      - 掛載 2 個 128 GB VHD<br>
+      - Ethernet 192.168.0.21、Ethernet 2 192.168.0.22、Ethernet 3 192.168.0.23<br>
   - 啟用 Hyper-V VM 巢狀虛擬化<br>
   ````
     # 啟用 Hyper-V VM 巢狀虛擬化
