@@ -61,9 +61,11 @@
     
     ````
  - 使用 [AzSHCI-Hyper-V.ps1](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/AzSHCI-Hyper-V.ps1) 佈署 <br> 
-	- 如果您之前沒有使用過，請點選 Powershell 後，點選建立儲存體<br>
-    ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell1.png "CloudShell1")<br>
-    ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell2.png "CloudShell2")<br>
+	- 如果您之前沒有使用過 Cloudshell<br>
+      - 請點選 Powershell <br>
+      ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell1.png "CloudShell1")<br>
+      - 點選建立儲存體<br>
+      ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell2.png "CloudShell2")<br>
     - 啟用 CloudShell<br>
 	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell3.png "CloudShell3")<br>
     - 輸入`Connect-AzAccount` 登入<br>
