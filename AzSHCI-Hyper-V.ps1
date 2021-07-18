@@ -43,7 +43,7 @@ New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 
 # 建立資料磁碟並且掛載
 $vm = Get-AzVM -ResourceGroupName $resourceGroup -Name $vmName
-$diskConfig = New-AzDiskConfig -Location $location -CreateOption Empty -DiskSizeGB 16384 -Tier P70 -SkuName Premium_LRS
+$diskConfig = New-AzDiskConfig -Location $location -CreateOption Empty -DiskSizeGB 256 -Tier P15 -SkuName Premium_LRS
 $dataDisk = New-AzDisk -ResourceGroupName $resourceGroup -DiskName datadisk -Disk $diskConfig
 $vm = Add-AzVMDataDisk -VM $vm -Name datadisk -CreateOption Attach -ManagedDiskId $dataDisk.Id -Lun 1
 Update-AzVM -ResourceGroupName $resourceGroup -VM $vm

@@ -24,7 +24,7 @@
 
 ## 實戰演練
 
-- [Lab1 - 建立 Azure 虛擬機器模擬內部佈署環境]()<br>
+- [Lab1 - 建立 Azure 虛擬機器模擬內部佈署環境](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab1.md)<br>
 - [Lab2 - 佈署 Azure Stack HCI OS]()<br>
 - [Lab3 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集]()<br>
 - [Lab4 - 使用 Azure Storage account 設定雲端見證]()<br>
