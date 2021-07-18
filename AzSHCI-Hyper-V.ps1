@@ -23,7 +23,7 @@ $User = "hciadmin"
 $PWord = ConvertTo-SecureString -String "hciadmin@1234" -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 
-#建立虛擬網路
+#設定虛擬網路
 $virtualNetwork = Get-AzVirtualNetwork -Name $vmName-Vnet -ResourceGroupName $resourceGroup 
 $pip = New-AzPublicIpAddress -ResourceGroupName $resourceGroup -Location $location -Name $vmName-pip -AllocationMethod Static -Sku Standard
 $nsgRule = New-AzNetworkSecurityRuleConfig -Name AllowRDPInbound -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389 -Access Allow
