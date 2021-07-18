@@ -104,10 +104,11 @@
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v1.png "hyper-v1")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v2.png "hyper-v2")<br>
   - 建立 4 台虛擬主機角色<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v12.png "hyper-v12")<br>
     - ADDS 負責網域控制站、DHCP Server<br>
-      - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.4<br>
+      - 2 vCPU、4096 MB RAM<br>
     - WAC 負責 Windows Admin Center 匣道<br>
-      - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.5<br>
+      - 2 vCPU、4096 MB RAM<br>
     - AzSHCI-node1 / AzSHCI-node2 主機<br>
       - 4 vCPU、32768 MB RAM<br>
       - 掛載 2 個 128 GB VHD<br>
