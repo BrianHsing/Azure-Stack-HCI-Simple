@@ -20,7 +20,7 @@ $virtualNetwork | Set-AzVirtualNetwork
 
 #建立使用者帳號密碼憑證
 $User = "hciadmin"
-$PWord = ConvertTo-SecureString -String "hciadmin@123" -AsPlainText -Force
+$PWord = ConvertTo-SecureString -String "yCM41YJm" -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
 
 #建立虛擬網路

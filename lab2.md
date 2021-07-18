@@ -10,4 +10,4 @@
 - [Installing Azure Stack HCI] 頁面等待安裝<br>
 - 在登入作業系統之前變更使用者的密碼，然後按 enter，進入伺服器設定工作畫面<br>
 - 更改伺服器名稱為 AzSHCI-node1 / AzSHCI-node2，輸入 1，並且輸入名稱後，選擇 Y 重新開機<br>
-- 開啟 Remote Desktop，
+- 輸入 7 進入 Remote Desktop，選擇

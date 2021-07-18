@@ -69,8 +69,8 @@
       ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell2.png "CloudShell2")<br>
     - 啟用 CloudShell<br>
 	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell3.png "CloudShell3")<br>
-    - 輸入`Connect-AzAccount -UseDeviceAuthentication` 登入，上傳 AzSHCI-Hyper-V.ps1<br>
-	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell4.png "CloudShell4")<br>
+    - 上傳 AzSHCI-Hyper-V.ps1<br>
+	  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell4.png "CloudShell4")<br>
 	- 輸入並執行 `./AzSHCI-Hyper-V.ps1` <br>
 
 ## 設定 Hyper-V 與建立虛擬機器
@@ -83,7 +83,7 @@
     https://azure.microsoft.com/zh-tw/products/azure-stack/hci/hci-download/<br>
   - 提供一下必要資訊後，請下載 Azure Stack HCI & Windows admin Center <br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell5.png "CloudShell5")<br>
-  - 開啟 AzSHCI 的 Windows PowerShell ISE<br>
+  - 使用`系統管理員身分`開啟 AzSHCI 的 Windows PowerShell ISE<br>
   - 建立虛擬網路交換器<br>
   ````
     #建立虛擬網路交換器
@@ -100,6 +100,9 @@
     New-Partition -AssignDriveLetter -UseMaximumSize | `
     Format-Volume -FileSystem NTFS -NewFileSystemLabel "DataDisk" -Confirm:$false
   ````
+  - 更改 Hyper-V 虛擬機器與虛擬硬碟路徑，更改至資料磁碟中<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v1.png "hyper-v1")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v2.png "hyper-v2")<br>
   - 建立 4 台虛擬主機角色<br>
     - ADDS 負責網域控制站、DHCP Server<br>
       - 2 vCPU、4096 MB RAM、Satic IP 192.168.0.4<br>
@@ -108,15 +111,16 @@
     - AzSHCI-node1 主機<br>
       - 4 vCPU、32768 MB RAM<br>
       - 掛載 2 個 128 GB VHD<br>
-      - Ethernet 192.168.0.11、Ethernet 2 192.168.0.12、Ethernet 3 192.168.0.13<br>
+      - 3 個 Network Adapter，均與 vSwitch 連接，每張網開均需要開啟 Mac Address Spoofing<br>
+      ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v3.png "hyper-v3")<br>
     - AzSHCI-node2 主機<br>
       - 4 vCPU、32768 MB RAM<br>
       - 掛載 2 個 128 GB VHD<br>
-      - Ethernet 192.168.0.21、Ethernet 2 192.168.0.22、Ethernet 3 192.168.0.23<br>
+      - 3 個 Network Adapter，均與 vSwitch 連接，每張網開均需要開啟 Mac Address Spoofing<br>
   - 啟用 Hyper-V VM 巢狀虛擬化<br>
   ````
     # 啟用 Hyper-V VM 巢狀虛擬化
     Set-VMProcessor -VMName AzSHCI-node1 -ExposeVirtualizationExtensions $true
     Set-VMProcessor -VMName AzSHCI-node2 -ExposeVirtualizationExtensions $true
   ````
-  前往[Lab2 - 佈署 Azure Stack HCI OS]()<br>
+  前往[Lab2 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
