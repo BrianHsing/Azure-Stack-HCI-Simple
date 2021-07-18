@@ -1,5 +1,6 @@
 # Lab1 - 建立 Azure 虛擬機器模擬內部佈署環境
 
+## 透過 Cloud Shell 匯入 ps1 建立 Azure 虛擬機器
 - 下載 [AzSHCI-Hyper-V.ps1](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/AzSHCI-Hyper-V.ps1)或複製下方 Powershell 指令<br>
 	- 此命令會建立 Standard_E16s_v3 的虛擬機器、虛擬網路 172.16.0.0/16、子網路 172.16.1.0/24、區域建立在東南亞，作業系統為 Windows Server 2019 Datacenter、透過延伸模組建立 Hyper-V 服務<br>
 	- 使用者登入帳號 hciadmin，使用者密碼 hciadmin@1234<br>
@@ -68,8 +69,6 @@
       ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell2.png "CloudShell2")<br>
     - 啟用 CloudShell<br>
 	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell3.png "CloudShell3")<br>
-    - 輸入`Connect-AzAccount` 登入<br>
-	- 上傳 AzSHCI-Hyper-V.ps1<br>
-	  ![GITHUB](https://github.com/BrianHsing/Azure-Migrate/blob/master/hyper-v/image/cloudshell-uploadps1.PNG "cloudshell-uploadps1")
-	  ![GITHUB](https://github.com/BrianHsing/Azure-Migrate/blob/master/hyper-v/image/upload-success.PNG "upload-succsess")
-	- 輸入並執行 `./Single-Hyper-V.ps1` <br>
+    - 輸入`Connect-AzAccount -UseDeviceAuthentication` 登入，上傳 AzSHCI-Hyper-V.ps1<br>
+	![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/CloudShell4.png "CloudShell4")<br>
+	- 輸入並執行 `./AzSHCI-Hyper-V.ps1` <br>
