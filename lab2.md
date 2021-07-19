@@ -15,5 +15,9 @@
 - [Installing Azure Stack HCI] 頁面等待安裝<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci6.png "azshci6")<br>
 - 在登入作業系統之前變更使用者的密碼，然後按 enter，進入伺服器設定工作畫面<br>
-- 更改伺服器名稱為 AzSHCI-node1 / AzSHCI-node2，輸入 1，並且輸入名稱後，選擇 Y 重新開機<br>
-- 輸入 7 進入 Remote Desktop，選擇
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci7.png "azshci7")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci8.png "azshci8")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci9.png "azshci9")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci10.png "azshci10")<br>
+- 輸入 7 進入 Remote Desktop，選擇 E 啟用，然後選擇 1 僅允許來自執行含有網路層級驗證之遠端桌面的電腦進行連線<br>
+- 
