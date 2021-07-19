@@ -47,7 +47,13 @@
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds14.png "adds14")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds15.png "adds15")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds16.png "adds16")<br>
+
 - 設定 DHCP Server<br>
+  - 使用系統管理員登入 hci\Administrator<br>
   - 
+
+## WAC 虛擬主機安裝 Windows Admin Center Gateway
+
+
 
 前往[Lab3 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
