@@ -20,8 +20,8 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci9.png "azshci9")<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci10.png "azshci10")<br>
 - 啟用遠端桌面，輸入 7 進入 Remote Desktop，選擇 E 啟用，然後選擇 1 僅允許來自執行含有網路層級驗證之遠端桌面的電腦進行連線<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci10.png "azshci13")<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci10.png "azshci14")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci13.png "azshci13")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci14.png "azshci14")<br>
 - 透過 CMD 更改網路設定，輸入 15 進入 command line<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci15.png "azshci15")<br>
 - 輸入 `netsh interface ipv4 show config`，可以看到目前擁有網路卡介面的名稱<br>
