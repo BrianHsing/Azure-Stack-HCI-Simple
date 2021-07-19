@@ -1,0 +1,1 @@
+# Lab7 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控
