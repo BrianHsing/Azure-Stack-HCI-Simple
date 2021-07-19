@@ -1,1 +1,1 @@
-# Lab7 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控
+# Lab7 - 在 Azure Stack HCI 叢集上建立虛擬機器

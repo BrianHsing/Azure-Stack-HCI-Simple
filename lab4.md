@@ -1,1 +1,1 @@
-# Lab4 - 使用 Azure Storage account 設定雲端見證
+# Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集

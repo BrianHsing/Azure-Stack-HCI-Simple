@@ -80,4 +80,4 @@
     Set-VMProcessor -VMName AzSHCI-node1 -ExposeVirtualizationExtensions $true
     Set-VMProcessor -VMName AzSHCI-node2 -ExposeVirtualizationExtensions $true
   ````
-  前往[Lab2 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
+  前往[Lab2 - 佈署 ADDS、WAC 虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>

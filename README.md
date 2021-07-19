@@ -25,10 +25,11 @@
 ## 實戰演練
 
 - [Lab1 - 建立 Azure 虛擬機器模擬內部佈署環境](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab1.md)<br>
-- [Lab2 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
-- [Lab3 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
-- [Lab4 - 使用 Azure Storage account 設定雲端見證](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>
-- [Lab5 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
-- [Lab6 - 在 Azure Stack HCI 叢集上建立虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
-- [Lab7 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab7.md)<br>
-- [Lab8 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>
+- [Lab2 - 佈署 ADDS、WAC 虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
+- [Lab3 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
+- [Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>
+- [Lab5 - 使用 Azure Storage account 設定雲端見證](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
+- [Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
+- [Lab7 - 在 Azure Stack HCI 叢集上建立虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab7.md)<br>
+- [Lab8 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>
+- [Lab9 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab9.md)<br>

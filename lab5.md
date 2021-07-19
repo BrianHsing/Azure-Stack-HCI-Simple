@@ -1,1 +1,1 @@
-# Lab5 - 在 Azure Stack HCI 叢集上建立磁碟區
+# Lab5 - 使用 Azure Storage account 設定雲端見證
