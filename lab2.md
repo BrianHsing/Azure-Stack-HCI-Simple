@@ -55,7 +55,29 @@
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp2.png "dhcp2")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp3.png "dhcp3")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp4.png "dhcp4")<br>
-
+  - 開啟 Menu 展開 Windows Administrative Tools，選擇 DHCP<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp5.png "dhcp5")<br>
+  - 展開 adds.hci.lab，選擇 New Scope<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp6.png "dhcp6")<br>
+  - 看到 New Scope 精靈後，點選下一步<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp7.png "dhcp7")<br>
+  - 輸入 Scope 名稱<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp8.png "dhcp8")<br>
+  - 輸入派發 IP 位址範圍<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp9.png "dhcp9")<br>
+  - 此階段不會設定排除，這部分可以直接選擇下一步<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp10.png "dhcp10")<br>
+  - 這個步驟會讓您 DHCP 租約時間，此階段不會更動，請選擇下一步<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp11.png "dhcp11")<br>
+  - 點選下一步<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp12.png "dhcp12")<br>
+  - 設定 Default Gateway 192.168.0.1<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp13.png "dhcp13")<br>
+  - 後續步驟無須變更，均選擇下一步，直到按下 Finish 完成<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp13.png "dhcp13")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp14.png "dhcp14")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp15.png "dhcp15")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp16.png "dhcp16")<br>
 ## WAC 虛擬主機安裝 Windows Admin Center Gateway
 
 
