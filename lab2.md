@@ -12,5 +12,9 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/win6.png "win6")<br>
 - [Installing Windows] 頁面等待安裝<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/win7.png "win7")<br>
-
+- 設定系統管理員密碼後，進入作業系統<br>
+- 更改主機名稱 ADDS / WAC<br>
+- 設定網路卡靜態 IP 與 DNS<br>
+  - ADDS IP 設定為 192.168.0.4<br>
+  - WAC IP 設定為 192.168.0.5<br>
 

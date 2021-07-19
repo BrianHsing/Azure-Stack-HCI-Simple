@@ -2,7 +2,7 @@
 
 ## 透過 Cloud Shell 匯入 ps1 建立 Azure 虛擬機器
 - 下載 [AzSHCI-Hyper-V.ps1](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/AzSHCI-Hyper-V.ps1)<br>
-	- 此命令會建立 Standard_E16s_v3 的虛擬機器、虛擬網路 172.16.0.0/16、子網路 172.16.1.0/24、區域建立在東南亞，作業系統為 Windows Server 2019 Datacenter、透過延伸模組建立 Hyper-V 服務<br>
+	- 此命令會建立 Standard_E16s_v3 的虛擬機器、虛擬網路 172.16.0.0/16、子網路 172.16.1.0/24、區域建立在東南亞，作業系統為 Windows Server 2019 Datacenter、透過延伸模組建立 Hyper-V 服務、掛載 1TB 資料磁碟<br>
 	- 使用者登入帳號 hciadmin，使用者密碼 yCM41YJm<br>
   - 使用 [AzSHCI-Hyper-V.ps1](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/AzSHCI-Hyper-V.ps1) 佈署 <br> 
 	- 如果您之前沒有使用過 Cloudshell<br>
