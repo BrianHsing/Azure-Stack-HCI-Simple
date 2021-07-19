@@ -50,7 +50,11 @@
 
 - 設定 DHCP Server<br>
   - 使用系統管理員登入 hci\Administrator<br>
-  - 
+  - 開啟伺服器管理員，點選 Complete DHCP configuration，並且都直接選擇下一步直到 close 按鈕結束<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp1.png "dhcp1")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp2.png "dhcp2")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp3.png "dhcp3")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp4.png "dhcp4")<br>
 
 ## WAC 虛擬主機安裝 Windows Admin Center Gateway
 
