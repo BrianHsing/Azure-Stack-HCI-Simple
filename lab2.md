@@ -78,6 +78,7 @@
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp14.png "dhcp14")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp15.png "dhcp15")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp16.png "dhcp16")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp17.png "dhcp17")<br>
 ## WAC 虛擬主機安裝 Windows Admin Center Gateway
 
 
