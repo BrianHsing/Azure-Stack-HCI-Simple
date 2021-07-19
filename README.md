@@ -20,15 +20,15 @@
    - 第一台角色負責網域控制站 (hci.lab) 與 DHCP Server<br>
    - 第二台角色負責 Windows Admin Center 閘道作為後續管理 Azure Stack HCI 統一管理介面<br>
    - 另外兩台角色為 Azure Stack HCI 主機，這兩台主機特別要注意的是，必須要啟用巢狀虛擬化以及 MAC Address Spoofing，才能順利地在 Azure Stack HCI 叢集上建立虛擬機器以及在第二層虛擬網路交換器之間順利地路由。<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/AzSHCI-architech.png)<br>
+ ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/AzSHCI-architech.png)<br>
 
 ## 實戰演練
 
 - [Lab1 - 建立 Azure 虛擬機器模擬內部佈署環境](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab1.md)<br>
 - [Lab2 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
-- [Lab3 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集]()<br>
-- [Lab4 - 使用 Azure Storage account 設定雲端見證]()<br>
-- [Lab5 - 在 Azure Stack HCI 叢集上建立磁碟區]()<br>
-- [Lab6 - 在 Azure Stack HCI 叢集上建立虛擬機器]()<br>
-- [Lab7 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控]()<br>
-- [Lab8 - 啟用額外的 Azure 混合式服務來增強叢集功能]()<br>
+- [Lab3 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
+- [Lab4 - 使用 Azure Storage account 設定雲端見證](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>
+- [Lab5 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
+- [Lab6 - 在 Azure Stack HCI 叢集上建立虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
+- [Lab7 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab7.md)<br>
+- [Lab8 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>
