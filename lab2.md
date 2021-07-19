@@ -81,6 +81,24 @@
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp17.png "dhcp17")<br>
 ## WAC 虛擬主機安裝 Windows Admin Center Gateway
 
-
+- 將 WAC 加入網域 hci.lab 後，重新開機<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac1.png "wac1")<br>
+- 使用 hci\Administrator 登入<br>
+- 點選 Windows Admin Center Setup，勾選 I accept these terms 後，點選下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac2.png "wac2")<br>
+- 選擇傳送診斷資料給 Microsoft 給微軟，選擇下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac3.png "wac3")<br>
+- 選擇是否使用 Microsoft Update 後，選擇下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac4.png "wac4")<br>
+- 看完安裝情境說明後，點選下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac5.png "wac5")<br>
+- 這裡預設不變，直接選擇下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac5-5.png "wac5-5")<br>
+- 這裡會產生自我簽署憑證，效期為 60 天，點選安裝<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac6.png "wac6")<br>
+- 完成後，請先安裝 Microsoft Edge，再透過連結開啟 Windows Admin Center，開啟時請使用網域管理員登入<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac7.png "wac7")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac8.png "wac8")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/wac9.png "wac9")<br>
 
 前往[Lab3 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
