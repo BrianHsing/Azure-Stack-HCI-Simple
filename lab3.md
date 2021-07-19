@@ -25,7 +25,7 @@
 - 透過 CMD 更改網路設定，輸入 15 進入 command line<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci15.png "azshci15")<br>
 - 輸入 `netsh interface ipv4 show config`，可以看到目前擁有網路卡介面的名稱<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci16.png "azshci14")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci16.png "azshci16")<br>
 - 依序更改靜態 IP、DNS Server<br>
   - AzSHCI-node1<br>
   ````
