@@ -50,4 +50,4 @@ Lab3 主要是說明 Hyper-V 安裝 Azure Stack HCI OS 的操作步驟，主要�
   netsh interface ip set dnsserver "Ethernet 2" static 192.168.0.4
   ````
 
-  前往[Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
+  前往[Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>

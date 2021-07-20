@@ -82,3 +82,13 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 
 此步驟選擇跳過，依照現實情況做建立，可以透過現有的實體設備來達到防火牆、負載平衡器等功能，如果您沒有實體設備，此步驟可讓您在資料中心集中設定及管理網路和網路服務，例如，您可以使用資料中心防火牆來管理網路的進出流量、使用軟體負載平衡器提供第四層負載平衡、RAS 閘道提供 VPN 與路油的控制。<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster28.png "cluster28")<br>
+
+## 完成 Azure Stack HCI 叢集
+
+- 跳過步驟後，會看到此畫面，點選 Go to connections list<br>
+- 可以看到所有連線的主機、叢集，點選 azshci-cluster.hci.lab<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster29.png "cluster29")<br>
+- 登入後即可看到叢集管理畫面<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster30.png "cluster30")<br>
+
+  前往[# Lab5 - 使用 Azure Storage account 設定雲端見證](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
