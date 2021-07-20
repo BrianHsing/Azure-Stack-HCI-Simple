@@ -30,5 +30,20 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 - 因為此 Lab 使用 Azure VM 來做環境模擬，所以無法偵測硬體更新，這部分點選 Skip 即可<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster9.png "cluster9")<br>
 - 最後重新啟動兩台 Azure Stack HCI 主機，完成後前往下個階段網路設定<br>
-  
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster10.png "cluster10")<br>  
 ## 網路
+
+此步驟指派並設定網路介面卡，並為每部伺服器建立虛擬交換器<br>
+
+- 檢查每台主機的網路介面卡，這裡可以看到每一個主機與有 3 張網卡，兩台主機必須要有相對應數量的網路介面卡，網路介面卡建議使用 10 Gb 或更快的網路介面卡，不過用於管理的網路介面卡可以使用 1 Gb 的規格<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster11.png "cluster11")<br>
+- 管理介面有兩個設定選項，第一個選項為每台主機使用 1 張實體網路介面來做管理。第二選項為每台主機使用 2 張實體網路介面，可以啟用管理介面的負載平衡，提供容錯功能<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster12.png "cluster12")<br>
+- 虛擬交換器的建立方式，視有多少張網路介面卡而定，系統會自動為每台主機建立虛擬交換器，實際上還是要依據符合環境的架構選擇。本教學使用建立一個適用於計算和儲存體的虛擬交換器，來進行資料的交換<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster13.png "cluster13")<br>
+- RDMA 可在使用最少主機 CPU 資源的同時，提供高輸送量、低延遲的網路功能。RDMA 介面卡只能與其他可執行相同 RDMA 通訊協定的 RDMA 介面卡搭配使用，主要類型為 iWARP 或 RoCE， 如果您想要實現 SMB 多重通道的需求，那您就必須佈署 RDMA，RDMA 僅支援同個 Site，不允許跨 Site 使用，此 Lab 使用虛擬機器所以這個步驟跳過<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster14.png "cluster14")<br>
+- 最後必須要定義每部主機的每個網路介面，必須均是唯一的靜態 IP 位址、子網路遮罩和 VLAN 識別碼，因為 Lab3 已經針對每部主機的網路介面做過設定，所以這個步驟可以直接點選 Apply and test，當狀態顯示 Passed 後，就代表完成網路設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster14.png "cluster14")<br>
+
+## 叢集
