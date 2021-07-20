@@ -1,5 +1,7 @@
 # Lab2 - 佈署 ADDS、WAC 虛擬機器
 
+Lab2 主要做基礎建設的佈署，包含網域控制站、DHCP Server、Windows Admin Center Gateway 等。<br>
+
 ## ADDS、WAC 安裝作業系統
 - 開啟虛擬機器啟動 Windows Server 2019 安裝精靈，選擇要安裝或接受預設語言設定的語言，然後選取下一步<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/win1.png "win1")<br>
