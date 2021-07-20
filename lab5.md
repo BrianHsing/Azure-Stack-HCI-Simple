@@ -71,5 +71,11 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update6.png "update6")<br>
 - 後續會跳出僅為評估與測試的警示視窗，勾選 Got it 後，點選 Join the preview channel<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update7.png "update7")<br>
-
-
+- 完成後可以看到兩個主機節點顯示 Ready<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update8.png "update8")<br>
+- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Updates，等待檢查後，可以看到更新項目中顯示 version 21H2，點選 Install 進行升級<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update9.png "update9")<br>
+- 在升級之前，系統會進行檢查，確認主機節點符合升級條件，檢查後發現有些錯誤，可以點選 Detail 下載報告<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update10.png "update10")<br>
+- 查看報告發現系統建議我們執行 Update-ClusterFunctionalLevel，將所有主機節點統一作業系統版本<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update10.png "update11")<br>
