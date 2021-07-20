@@ -34,4 +34,10 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 
 - 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Updates，點選 Add Cluster-Aware-Updating role<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update1.png "update1")<br>
-- 
+- 完成新增後，可以看到頁面所有主機節點的可用更新項目，請點選 Intall 按鈕<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update2.png "update2")<br>
+- 忽略 hardware updates 檢查，點選Next: Install<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update3.png "update3")<br>
+- 再次點選 Install 正式進行安裝，會需要等待幾分鐘時間<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update4.png "update4")<br>
+ > **Tips.更新的項目會依據當時下載的版本有所差異** <br>
