@@ -39,8 +39,6 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 完成後可以觀察到 Witness resource status 顯示 Online<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/witness3.png "witness3")<br>
 
-## 安裝 Windows
-
 ## 啟用叢集感知更新並且進行更新
 
 叢集感知更新 (CAU) 是 Microsoft 的預設叢集協調器，可讓您透過 Windows Admin Center 中的整合式更新體驗或透過 PowerShell 命令手動執行更新。<br>
@@ -54,5 +52,24 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 再次點選 Install 正式進行安裝，會需要等待幾分鐘時間<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update4.png "update4")<br>
  > **Tips.更新的項目會依據當時下載的版本有所差異** <br>
+
+## 加入預覽通道
+
+加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本有以下好處：<br>
+- 從 Azure 入口網站監視叢集<br>
+- 使用 Gpu 搭配叢集 Vm<br>
+- 動態 CPU 相容性模式<br>
+- 儲存體精簡布建<br>
+- 網路 ATC<br>
+- 可調整的儲存體修復速度<br>
+- 支援 AMD 處理器上的嵌套虛擬化<br>
+- 核心軟重新開機<br>
+
+- 確定您的主機作業系統版本號碼更新至 17784.1737 以上版本<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update5.png "update5")<br>
+- 選擇左邊的功能表下方，點選 Setting。在 Azure Stack HCI 功能欄中，選擇 Join the preview，點選右邊 Get started<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update6.png "update6")<br>
+- 後續會跳出僅為評估與測試的警示視窗，勾選 Got it 後，點選 Join the preview channel<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update7.png "update7")<br>
 
 
