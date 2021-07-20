@@ -46,7 +46,7 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 - 最後必須要定義每部主機的每個網路介面，必須均是唯一的靜態 IP 位址、子網路遮罩和 VLAN 識別碼，因為 Lab3 已經針對每部主機的網路介面做過設定，所以這個步驟可以直接點選 Apply and test，當狀態顯示 Passed 後，就代表完成網路設定<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster15.png "cluster15")<br>
 - 設定的過程中會請您輸入身分憑證，選擇 Use another account for this connection，必且輸入網域管理員帳號密碼後，勾選 Use these credentials for all connections，最後點選 Continue<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster16png "cluster16")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster16.png "cluster16")<br>
 - 出現 CredSSP 視窗，請點選 Yes，暫時允許委派 Azure Stack HCI 作業使用 Windows 遠端管理 (WinRM)，結束設定後會將這個關閉<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster17.png "cluster17")<br>
 - 當狀態顯示 Passed 後，就代表完成網路設定<br>
@@ -77,7 +77,7 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster25.png "cluster25")<br>
 - 最後一步驟就是點選 Enable ，完成啟用 S2D 服務即可完成<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster26.png "cluster26")<br>
-
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster27.png "cluster27")<br>
 ## SDN (option)
 
 此步驟選擇跳過，依照現實情況做建立，可以透過現有的實體設備來達到防火牆、負載平衡器等功能，如果您沒有實體設備，此步驟可讓您在資料中心集中設定及管理網路和網路服務，例如，您可以使用資料中心防火牆來管理網路的進出流量、使用軟體負載平衡器提供第四層負載平衡、RAS 閘道提供 VPN 與路油的控制。<br>
