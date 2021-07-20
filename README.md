@@ -33,5 +33,4 @@
 - [Lab5 - Azure Stack HCI 叢集基本設置](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
 - [Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
 - [Lab7 - 在 Azure Stack HCI 叢集上建立虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab7.md)<br>
-- [Lab8 - Azure Arc 與 Azure Stack HCI 整合設定、更新與監控](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>
-- [Lab9 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab9.md)<br>
+- [Lab8 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>
