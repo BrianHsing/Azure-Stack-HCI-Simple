@@ -12,7 +12,7 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 
 
 - 註冊 Windows Admin Center<br>
-  - 選擇左邊的功能表下方，點選設定。在 Azure Stack HCI 功能欄中，選擇 Azure Stack HCI registration，點選右邊 Register<br>
+  - 選擇左邊的功能表下方，點選 Setting。在 Azure Stack HCI 功能欄中，選擇 Azure Stack HCI registration，點選右邊 Register<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register1.png "register1")<br>
   - 點選右邊紅框中 Copy 按鈕，並且點選 3. Enter the code，開啟登入網頁，輸入 code 並且使用具有符合權限的帳號登入<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register2.png "register2")<br>
@@ -28,6 +28,19 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
   - 註冊成功後，即可看到註冊相關資訊與連線同步時間<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register8.png "register8")<br>
 
+# 設定叢集雲端見證
+
+因為本篇 Lab 只使用兩個節點，所以需要使用見證，來避免點失敗時無法選擇存活的節點，仲裁見證支援 3 種類型，本篇會使用雲端見證來作為叢集的仲裁<br>
+
+- 開啟 Azure 入口網站，新增 Storage accounts (操作步驟省略)，新增完成後，請在 Storage accounts 頁面中的 Security + networking 功能欄位下，選擇 Access keys，複製 Storage account name 與 key1，稍後會使用到<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/witness1.png "witness1")<br>
+- 選擇左邊的功能表下方，點選 Setting。在 Cluster 功能欄中，選擇 Witness，點選右邊 Witness typer 下拉是選單，選擇 Cloud witness，並且填入 Azure Storage account name 與 Azure Storage account key，完成後按下 Save 按鈕<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/witness2.png "witness2")<br>
+- 完成後可以觀察到 Witness resource status 顯示 Online<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/witness3.png "witness3")<br>
+
+## 安裝 Windows
+
 ## 啟用叢集感知更新並且進行更新
 
 叢集感知更新 (CAU) 是 Microsoft 的預設叢集協調器，可讓您透過 Windows Admin Center 中的整合式更新體驗或透過 PowerShell 命令手動執行更新。<br>
@@ -41,3 +54,5 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 再次點選 Install 正式進行安裝，會需要等待幾分鐘時間<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update4.png "update4")<br>
  > **Tips.更新的項目會依據當時下載的版本有所差異** <br>
+
+
