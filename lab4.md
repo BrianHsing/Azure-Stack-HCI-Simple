@@ -8,7 +8,7 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster1.png "cluster1")<br>
 - 點選新增，並在 Server Clusters 功能視窗中選擇 Create new<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster2.png "cluster2")<br>
-- Cluster Type 選擇 Azure Stack HCI，server locations 選擇 All Servers in on site，如果您想在不同分公司也佈署一座叢集，讓兩個分公司間的叢集互相備援，您可以選擇 Servers in two sites，無論您選擇哪種類型，節點上限都是 16 個 node，單一個 site 為 2 個 node<br>
+- Cluster Type 選擇 Azure Stack HCI，server locations 選擇 All Servers in on site，如果您想在不同分公司也佈署一座叢集，讓兩個分公司間的叢集互相備援，您可以選擇 Servers in two sites，無論您選擇哪種類型，節點上限都是 16 個 node，單一個 site 下限為 2 個 node<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster3.png "cluster3")<br>
 - 檢查佈署先決條件，確認後選擇下一步<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster4.png "cluster4")<br>
