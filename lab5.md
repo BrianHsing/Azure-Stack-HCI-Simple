@@ -25,3 +25,13 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register6.png "register6")<br>
   - 出現 CredSSP 詢問視窗後，一樣是選擇 Yes 按鈕，後續需要幾分鐘的時間來進行註冊<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register7.png "register7")<br>
+  - 註冊成功後，即可看到註冊相關資訊與連線同步時間<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register8.png "register8")<br>
+
+## 啟用叢集感知更新並且進行更新
+
+叢集感知更新 (CAU) 是 Microsoft 的預設叢集協調器，可讓您透過 Windows Admin Center 中的整合式更新體驗或透過 PowerShell 命令手動執行更新。<br>
+
+- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Updates，點選 Add Cluster-Aware-Updating role<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update1.png "update1")<br>
+- 

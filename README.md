@@ -16,6 +16,8 @@
    - Azure 訂用帳戶、Azure 訂用帳戶擁有者權限<br>
    - 有基本的 Powershell 使用經驗<br>
  - 需要使用 Azure 虛擬機器巢狀虛擬化來模擬，稍後可以遵循 Lab 透過撰寫好的 ps1 檔直接執行佈署，或者您也可以直接建立<br>
+ - Azure Stack HCI OS 使用 20H2 版本<br>
+ - Windows Server 使用 2019 評估版本<br>
  - Azure 虛擬機器建立完成後，主要會在 Hyper-V 中建立 4 台虛擬機器<br>
    - 第一台角色負責網域控制站 (hci.lab) 與 DHCP Server<br>
    - 第二台角色負責 Windows Admin Center 閘道作為後續管理 Azure Stack HCI 統一管理介面<br>
