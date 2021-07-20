@@ -44,6 +44,40 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 - RDMA 可在使用最少主機 CPU 資源的同時，提供高輸送量、低延遲的網路功能。RDMA 介面卡只能與其他可執行相同 RDMA 通訊協定的 RDMA 介面卡搭配使用，主要類型為 iWARP 或 RoCE， 如果您想要實現 SMB 多重通道的需求，那您就必須佈署 RDMA，RDMA 僅支援同個 Site，不允許跨 Site 使用，此 Lab 使用虛擬機器所以這個步驟跳過<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster14.png "cluster14")<br>
 - 最後必須要定義每部主機的每個網路介面，必須均是唯一的靜態 IP 位址、子網路遮罩和 VLAN 識別碼，因為 Lab3 已經針對每部主機的網路介面做過設定，所以這個步驟可以直接點選 Apply and test，當狀態顯示 Passed 後，就代表完成網路設定<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster14.png "cluster14")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster15.png "cluster15")<br>
+- 設定的過程中會請您輸入身分憑證，選擇 Use another account for this connection，必且輸入網域管理員帳號密碼後，勾選 Use these credentials for all connections，最後點選 Continue<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster16png "cluster16")<br>
+- 出現 CredSSP 視窗，請點選 Yes，暫時允許委派 Azure Stack HCI 作業使用 Windows 遠端管理 (WinRM)，結束設定後會將這個關閉<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster17.png "cluster17")<br>
+- 當狀態顯示 Passed 後，就代表完成網路設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster18.png "cluster18")<br>
 
 ## 叢集
+
+此步驟驗證叢集的設定是否正確
+
+- 點選驗證，驗證需要幾分鐘時間，請耐心等待<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster19.png "cluster19")<br>
+- 完成驗證後，可以下載報告，如果有錯誤可以先參考報告內容完成修正後，重新點選 Validate again，確認無誤後選擇下一步<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster20.png "cluster20")<br>
+- 在這個步驟會建立叢集的 DNS 紀錄，請輸入叢集名稱 AzSHCI-Cluster 與靜態 IP 位址 192.168.0.50，完成後點選 Create cluster<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster21.png "cluster21")<br>
+- 完成建立後，可以點選下一步，啟用 S2D<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster22.png "cluster22")<br>
+
+## 儲存體
+
+此步驟設定儲存空間直接存取 (S2D)，本 Lab 因為考慮掛載磁碟初始化時間考量，所以每台主機掛載 2 個 127 Gb 虛擬磁碟，而因為是在虛擬機器環境中模擬，所以有關於 S2D 效能的測試不適用在這個教學中測試<br>
+
+- 在現實狀況中，如果您的磁碟不是全新安裝的狀況下，您可以 Erase drives 選擇清除磁碟資料<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster23.png "cluster23")<br>
+- 這邊會檢查主機內磁碟機是否已正常運作、連線，如果沒問題可以選擇下一步，會驗證是否符合 S2D 的啟用要求<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster24.png "cluster24")<br>
+- 如果沒問題可以看到 Result 狀態都是 Success，如果有問題可以透過下載報告來修正錯誤，並且選擇 Vaildate again 重新驗證<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster25.png "cluster25")<br>
+- 最後一步驟就是點選 Enable ，完成啟用 S2D 服務即可完成<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster26.png "cluster26")<br>
+
+## SDN (option)
+
+此步驟選擇跳過，依照現實情況做建立，可以透過現有的實體設備來達到防火牆、負載平衡器等功能，如果您沒有實體設備，此步驟可讓您在資料中心集中設定及管理網路和網路服務，例如，您可以使用資料中心防火牆來管理網路的進出流量、使用軟體負載平衡器提供第四層負載平衡、RAS 閘道提供 VPN 與路油的控制。<br>
