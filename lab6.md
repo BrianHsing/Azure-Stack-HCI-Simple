@@ -45,4 +45,4 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm11.png "vm11")<br>
 - 完成後可以在 Azure Recovery Services Vault 看到複寫狀況與拓樸<br>
 
-- 返回[透過 Azure VM 巢狀虛擬化實作 Azure-Stack-HCI](https://github.com/BrianHsing/Azure-Stack-HCI)<br>
+返回[透過 Azure VM 巢狀虛擬化實作 Azure-Stack-HCI](https://github.com/BrianHsing/Azure-Stack-HCI)<br>
