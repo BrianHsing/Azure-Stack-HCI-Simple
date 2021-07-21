@@ -22,11 +22,16 @@
 
 ## 建立虛擬機器
 
-- 在 Windows Admin Center 中，然後從左欄 Storage 功能列中選擇 Virtual machines，並在右邊點選 Add -> New<br>
+- 在 Windows Admin Center 中，然後從左欄 Compute 功能列中選擇 Virtual machines，並在右邊點選 Add -> New<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm1.png "vm1")<br>
 - 輸入虛擬機器名稱，選擇您想將虛擬機器放在哪個主機節點，並且選擇 Path 為剛剛所建立的 Volume02，處理器與記憶體分別給予 2 vCPU 與 4 GB RAM<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm2.png "vm2")<br>
 - virtual switch 選擇之前所建立的 ConvergedSwitch，並建立 40 GB 的虛擬磁碟，最後在選擇剛剛所上傳的映像檔安裝作業系統，之後按下 Create，等待建立<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm3.png "vm3")<br>
 - 在按照上述步驟再建立一台 VM2<br>
-- 
+- 如果您想要設定這兩台虛擬機器不要被分配在同一台主機集區，可以點選右上角齒輪，點選左邊的功能表下方，選擇 Affinity rules 設定規則，點選 Create rule<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm4.png "vm4")<br>
+- 輸入規則名稱，規則類型選擇 Apart (different servers)，下方依序選擇 vm1、vm2，完成後點選 Create rule<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm5.png "vm5")<br>
+- 返回 Virtual machines 頁面，就可以看到 vm1、vm2 已經預設被分配到兩台主集節點上了<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm6.png "vm6")<br>
