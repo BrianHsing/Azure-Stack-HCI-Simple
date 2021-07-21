@@ -117,6 +117,8 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
 - 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Update Management，然後點選 Set up 按鈕，右邊會出現 Set up Azure Update Management 視窗，選擇您的訂用帳戶與資源群組後，選擇稍早新增的 Log analytics workspace，並且新增 Azure Automation account，選擇同樣的訂用帳戶，再次點選 Set up<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/updatemgmt.png "updatemgmt")<br>
+- 完成後就可以在 Azure Arc 服務上直接管理主機節點的更新狀況，並且可以直接透過 Azure 入口網站排定更新時程<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update15.png "update15")<br>
 
 ## 啟用 Azure Site Recovery
 
