@@ -1,4 +1,4 @@
-# Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區
+# Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區與虛擬機器
 
 此 Lab 僅建立 2 個主機節點，所以也只能建立雙向鏡像<br>
 
@@ -15,4 +15,9 @@
 
 ## 開啟磁片區並新增映像檔
 
-- 在磁片區清單中，選取開啟 Volume01，在頁面頂端，選取 [ 開啟]。 這會啟動 Windows Admin Center 中 的 [檔案 ] 工具。
+- 在磁片區清單中，選取開啟 Volume01，在頁面頂端，選取 open。 這會啟動 Windows Admin Center 中 的 Files & file sharing 工具，在這裡上傳映像檔<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/stor5.png "stor5")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/stor7.png "stor7")<br>
+
+
+## 建立虛擬機器

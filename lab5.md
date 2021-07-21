@@ -129,4 +129,10 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 右邊會出現 Set up host with Azure Site Recovery 視窗，選擇您的訂用帳戶與資源群組後，選擇新增 Recovery Services Vault，完成後，再次點選 Set up<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr2.png "asr2")<br>
 
+## 關閉 CredSSP
+
+- 完成基本設定後，請到主機節點點選 disable CredSSP<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/disablecredssp.png "disablecredssp")<br>
+
+
 前往[Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
