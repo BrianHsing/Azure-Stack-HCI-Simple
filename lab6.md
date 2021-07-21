@@ -14,3 +14,5 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/stor4.png "stor4")<br>
 
 ## 開啟磁片區並新增映像檔
+
+- 在磁片區清單中，選取開啟 Volume01，在頁面頂端，選取 [ 開啟]。 這會啟動 Windows Admin Center 中 的 [檔案 ] 工具。
