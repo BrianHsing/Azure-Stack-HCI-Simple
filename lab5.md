@@ -88,10 +88,6 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 
 - 點選 WAC 管理頁面右上角齒輪，並且在左欄 Gateway 功能列中選擇 Extension，在這裡您可以將您需要的模組更新至最新版本<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update14.png "update14")<br>
-## 啟用 Azure Monitor 監控叢集
-
-- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Azure Monitor，可以看到右邊 2 台主機節點狀態顯示 Disconnected。點選上方 Onboard cluster 後，會出現 Set up Azure Monitor 視窗，選擇訂用帳戶、資源群組、並且新增 Log analytics workspace 來儲存記錄檔，完成後點選 Set up 完成設定<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor1.png "monitor1")<br>
 
 ## 啟用 Azure Arc 整合
 
@@ -103,3 +99,12 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc2.png "arc2")<br>
 - 完成後即可在 Azure 上看到主機節點資訊，並且進行更新、配置等管理<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc3.png "arc3")<br>
+
+## 啟用 Azure Monitor 監控叢集
+
+此功能會設定健全狀況服務和 Log Analytics，與自動安裝 MMA<br>
+
+- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Azure Monitor，可以看到右邊 2 台主機節點狀態顯示 Disconnected。點選上方 Onboard cluster 後，會出現 Set up Azure Monitor 視窗，選擇訂用帳戶、資源群組、並且新增 Log analytics workspace 來儲存記錄檔，完成後點選 Set up 完成設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor1.png "monitor1")<br>
+- 完成後就可以看到 2 台主機節點狀態顯示為 Connected，並且現在您可以為 Azure Stack HCI 叢集設定規則警示<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor2.png "monitor2")<br>
