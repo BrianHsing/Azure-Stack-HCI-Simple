@@ -30,7 +30,7 @@
 - [Lab2 - 佈署 ADDS、WAC 虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
 - [Lab3 - 佈署 Azure Stack HCI OS](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab3.md)<br>
 - [Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>
-- [Lab5 - Azure Stack HCI 叢集基本設置](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
+- [Lab5 - Azure Stack HCI 叢集初始設定](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
 - [Lab6 - 在 Azure Stack HCI 叢集上建立磁碟區](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab6.md)<br>
 - [Lab7 - 在 Azure Stack HCI 叢集上建立虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab7.md)<br>
 - [Lab8 - 啟用額外的 Azure 混合式服務來增強叢集功能](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab8.md)<br>

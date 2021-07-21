@@ -1,4 +1,4 @@
-# Lab5 - Azure Stack HCI 叢集基本設置
+# Lab5 - Azure Stack HCI 叢集初始設定
 
 Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款進行註冊，這個 Lab 主要是說明如何向 Azure 註冊 Azure Stack HCI 叢集，並啟用進行監視、支援、計費和混合式服務<br>
 - 先決條件<br>
@@ -53,7 +53,7 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update4.png "update4")<br>
  > **Tips.更新的項目會依據當時下載的版本有所差異** <br>
 
-## 加入預覽通道
+## 加入預覽通道 (option)
 
 加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本有以下好處：<br>
 - 從 Azure 入口網站監視叢集<br>
@@ -75,7 +75,31 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update8.png "update8")<br>
 - 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Updates，等待檢查後，可以看到更新項目中顯示 version 21H2，點選 Install 進行升級<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update9.png "update9")<br>
-- 在升級之前，系統會進行檢查，確認主機節點符合升級條件，檢查後發現有些錯誤，可以點選 Detail 下載報告<br>
+- 在升級之前，系統會進行檢查，確認主機節點符合升級條件，檢查後發現有些錯誤，可以點選 Detail 下載報告，查看報告發現系統建議我們執行 Update-ClusterFunctionalLevel，系統認為我們安裝版本不一致，不過我們確定安裝的作業系統版本是一致的，所以先忽略此警告，點選 Next:Install<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update10.png "update10")<br>
-- 查看報告發現系統建議我們執行 Update-ClusterFunctionalLevel，將所有主機節點統一作業系統版本<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update10.png "update11")<br>
+- 勾選 Update the cluster funtional level to enable new features 後，點選 Install 按鈕，需要等待一些時間<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update12.png "update12")<br>
+- 完成更新後就可以在 Servers Inventory 看到 OS 版本號碼已經更新成 21H2 的版本<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update13.png "update13")<br>
+
+## 更新 Windows Admin Center 延伸模組
+
+無論是想要佈署 AKS on HCI 或傳統 Windows Server 內建的角色服務，您都可以在這邊查看是否有更新可以下載<br>
+
+- 點選 WAC 管理頁面右上角齒輪，並且在左欄 Gateway 功能列中選擇 Extension，在這裡您可以將您需要的模組更新至最新版本<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update14.png "update14")<br>
+## 啟用 Azure Monitor 監控叢集
+
+- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Azure Monitor，可以看到右邊 2 台主機節點狀態顯示 Disconnected。點選上方 Onboard cluster 後，會出現 Set up Azure Monitor 視窗，選擇訂用帳戶、資源群組、並且新增 Log analytics workspace 來儲存記錄檔，完成後點選 Set up 完成設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor1.png "monitor1")<br>
+
+## 啟用 Azure Arc 整合
+
+未來叢集中的每一部伺服器預設都會 Azure Arc 啟用，但如果是較早註冊的叢集，則是透過圖形化介面一鍵啟用<br>
+
+- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
+- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Arc，然後點選 Set up 按鈕，右邊會出現 Set up Azure Arc 視窗，選擇您的訂用帳戶與資源群組後，再次點選 Set up<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc2.png "arc2")<br>
+- 完成後即可在 Azure 上看到主機節點資訊，並且進行更新、配置等管理<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc3.png "arc3")<br>

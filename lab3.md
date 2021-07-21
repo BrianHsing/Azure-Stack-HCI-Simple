@@ -19,6 +19,7 @@ Lab3 主要是說明 Hyper-V 安裝 Azure Stack HCI OS 的操作步驟，主要�
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci8.png "azshci8")<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci9.png "azshci9")<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci10.png "azshci10")<br>
+ > **Tips.可以自行決定是否要在這個階段更改電腦名稱，需要重開機** <br>
 - 啟用遠端桌面，輸入 7 進入 Remote Desktop，選擇 E 啟用，然後選擇 1 僅允許來自執行含有網路層級驗證之遠端桌面的電腦進行連線<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci13.png "azshci13")<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/azshci14.png "azshci14")<br>
