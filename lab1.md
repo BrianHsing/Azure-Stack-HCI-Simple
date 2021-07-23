@@ -72,6 +72,11 @@
         - 點選 Finish，並等待硬碟建立<br>
         ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v11.png "hyper-v11")<br>
       - 3 個 Network Adapter，均與 vSwitch 連接，每張網開均需要開啟 Mac Address Spoofing<br>
+      ````
+      # 也可以透過 Powershell 指令直接改所有網卡設定
+      Get-VMNetworkAdapter -VMName AzSHCI-node1 | Set-VMNetworkAdapter -MacAddressSpoofing On
+      Get-VMNetworkAdapter -VMName AzSHCI-node2 | Set-VMNetworkAdapter -MacAddressSpoofing On
+      ````
       ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/hyper-v3.png "hyper-v3")<br>
 
   - 啟用 Hyper-V VM 巢狀虛擬化<br>
