@@ -8,6 +8,13 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
     - Create/Get/Delete Azure resources and resource groups<br>
   - 建議您直接使用擁有 Azure AD Global admin 與 Azure Subscription Owner 帳號來進行登入，可以節省一些時間<br>
 
+## 更新 Windows Admin Center 延伸模組
+
+無論是想要佈署 AKS on HCI 或傳統 Windows Server 內建的角色服務，您都可以在這邊查看是否有更新可以下載<br>
+
+- 點選 WAC 管理頁面右上角齒輪，並且在左欄 Gateway 功能列中選擇 Extension，在這裡您可以將您需要的模組更新至最新版本<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update14.png "update14")<br>
+
 ## 使用 Windows Admin Center 向 Azure 註冊 Azure Stack HCI 叢集
 
 
@@ -41,6 +48,32 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 完成後可以觀察到 Witness resource status 顯示 Online<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/witness3.png "witness3")<br>
 
+
+## 啟用 Azure Arc 整合
+
+未來叢集中的每一部伺服器預設都會 Azure Arc 啟用，但如果是較早註冊的叢集，則是透過圖形化介面一鍵啟用<br>
+如果您使用 `21H2` 的版本，則不需要特別設定，完成註冊後即可看到叢集節點出現 Azure Arc 整合的 Azure Stack HCI<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc4.png "arc4")<br>
+也可以透過在主集節點執行 PowerShell 指令 `Get-AzureStackHCIArcIntegration`，查詢自動啟用狀態<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc5.png "arc5")<br>
+
+
+- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
+- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Arc，然後點選 Set up 按鈕，右邊會出現 Set up Azure Arc 視窗，選擇您的訂用帳戶與資源群組後，再次點選 Set up<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc2.png "arc2")<br>
+- 完成後即可在 Azure 上看到主機節點資訊，並且進行更新、配置等管理<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc3.png "arc3")<br>
+
+## 啟用 Azure Monitor 監控叢集
+
+此功能會設定健全狀況服務和 Log Analytics，與自動安裝 MMA<br>
+
+- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Azure Monitor，可以看到右邊 2 台主機節點狀態顯示 Disconnected。點選上方 Onboard cluster 後，會出現 Set up Azure Monitor 視窗，選擇訂用帳戶、資源群組、並且新增 Log analytics workspace 來儲存記錄檔，完成後點選 Set up 完成設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor1.png "monitor1")<br>
+- 完成後就可以看到 2 台主機節點狀態顯示為 Connected，並且現在您可以為 Azure Stack HCI 叢集設定規則警示<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor2.png "monitor2")<br>
+
 ## 啟用叢集感知更新並且進行更新
 
 叢集感知更新 (CAU) 是 Microsoft 的預設叢集協調器，可讓您透過 Windows Admin Center 中的整合式更新體驗或透過 PowerShell 命令手動執行更新。<br>
@@ -54,6 +87,28 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 - 再次點選 Install 正式進行安裝，會需要等待幾分鐘時間<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update4.png "update4")<br>
  > **Tips.更新的項目會依據當時下載的版本有所差異** <br>
+
+## 啟用 Azure 更新管理
+
+此步驟一鍵會協助將 Azure Arc 啟用的伺服器上架至 Azure 自動化中更新管理<br>
+ 
+- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
+- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Update Management，然後點選 Set up 按鈕，右邊會出現 Set up Azure Update Management 視窗，選擇您的訂用帳戶與資源群組後，選擇稍早新增的 Log analytics workspace，並且新增 Azure Automation account，選擇同樣的訂用帳戶，再次點選 Set up<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/updatemgmt.png "updatemgmt")<br>
+- 完成後就可以在 Azure Arc 服務上直接管理主機節點的更新狀況，並且可以直接透過 Azure 入口網站排定更新時程<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update15.png "update15")<br>
+
+## 啟用 Azure Site Recovery
+
+此步驟一鍵設定災難復原設定保護，簡化在伺服器或叢集上複寫虛擬機器的佈署<br>
+
+- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
+- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Site Recovery，然後點選 Set up 按鈕<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr1.png "asr1")<br>
+- 右邊會出現 Set up host with Azure Site Recovery 視窗，選擇您的訂用帳戶與資源群組後，選擇新增 Recovery Services Vault，完成後，再次點選 Set up<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr2.png "asr2")<br>
 
 ## 加入預覽通道 (option)
 
@@ -83,61 +138,6 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update12.png "update12")<br>
 - 完成更新後就可以在 Servers Inventory 看到 OS 版本號碼已經更新成 21H2 的版本<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update13.png "update13")<br>
-
-## 更新 Windows Admin Center 延伸模組
-
-無論是想要佈署 AKS on HCI 或傳統 Windows Server 內建的角色服務，您都可以在這邊查看是否有更新可以下載<br>
-
-- 點選 WAC 管理頁面右上角齒輪，並且在左欄 Gateway 功能列中選擇 Extension，在這裡您可以將您需要的模組更新至最新版本<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update14.png "update14")<br>
-
-## 啟用 Azure Arc 整合
-
-未來叢集中的每一部伺服器預設都會 Azure Arc 啟用，但如果是較早註冊的叢集，則是透過圖形化介面一鍵啟用<br>
-如果您使用 `21H2` 的版本，則不需要特別設定，完成註冊後即可看到叢集節點出現 Azure Arc 整合的 Azure Stack HCI<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc4.png "arc4")<br>
-也可以透過在主集節點執行 PowerShell 指令 `Get-AzureStackHCIArcIntegration`，查詢自動啟用狀態<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc5.png "arc5")<br>
-
-
-- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
-- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Arc，然後點選 Set up 按鈕，右邊會出現 Set up Azure Arc 視窗，選擇您的訂用帳戶與資源群組後，再次點選 Set up<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc2.png "arc2")<br>
-- 完成後即可在 Azure 上看到主機節點資訊，並且進行更新、配置等管理<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc3.png "arc3")<br>
-
-## 啟用 Azure Monitor 監控叢集
-
-此功能會設定健全狀況服務和 Log Analytics，與自動安裝 MMA<br>
-
-- 在 WAC 管理頁面中，在左欄 Tools 功能列表，選擇 Azure Monitor，可以看到右邊 2 台主機節點狀態顯示 Disconnected。點選上方 Onboard cluster 後，會出現 Set up Azure Monitor 視窗，選擇訂用帳戶、資源群組、並且新增 Log analytics workspace 來儲存記錄檔，完成後點選 Set up 完成設定<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor1.png "monitor1")<br>
-- 完成後就可以看到 2 台主機節點狀態顯示為 Connected，並且現在您可以為 Azure Stack HCI 叢集設定規則警示<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/monitor2.png "monitor2")<br>
-
-## 啟用 Azure 更新管理
-
-此步驟一鍵會協助將 Azure Arc 啟用的伺服器上架至 Azure 自動化中更新管理<br>
- 
-- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
-- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Update Management，然後點選 Set up 按鈕，右邊會出現 Set up Azure Update Management 視窗，選擇您的訂用帳戶與資源群組後，選擇稍早新增的 Log analytics workspace，並且新增 Azure Automation account，選擇同樣的訂用帳戶，再次點選 Set up<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/updatemgmt.png "updatemgmt")<br>
-- 完成後就可以在 Azure Arc 服務上直接管理主機節點的更新狀況，並且可以直接透過 Azure 入口網站排定更新時程<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update15.png "update15")<br>
-
-## 啟用 Azure Site Recovery
-
-此步驟一鍵設定災難復原設定保護，簡化在伺服器或叢集上複寫虛擬機器的佈署<br>
-
-- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
-- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Site Recovery，然後點選 Set up 按鈕<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr1.png "asr1")<br>
-- 右邊會出現 Set up host with Azure Site Recovery 視窗，選擇您的訂用帳戶與資源群組後，選擇新增 Recovery Services Vault，完成後，再次點選 Set up<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr2.png "asr2")<br>
-
 
 ## 關閉 CredSSP
 
