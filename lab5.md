@@ -24,7 +24,7 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
   - 將註冊的 Azure Stack HCI 服務選擇要放在哪個資源群組以及區域，完成後點選 register<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register6.png "register6")<br>
   - 如果您使用的是 21H2 版本，則可以看到下方可以讓您勾選啟用 Azure Arc 的選項<br>
-  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register6-1.png "register6-1")<br>
+  ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI-Simple/blob/main/image/register6-1.png "register6-1")<br>
   - 出現 CredSSP 詢問視窗後，一樣是選擇 Yes 按鈕，後續需要幾分鐘的時間來進行註冊<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/register7.png "register7")<br>
   - 註冊成功後，即可看到註冊相關資訊與連線同步時間<br>
