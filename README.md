@@ -5,13 +5,13 @@
  
  本篇主要分為兩大主軸，第一是透過 Azure VM 巢狀虛擬化來模擬內部佈署的 Azure Stack HCI 叢集環境，第二則是透過 Azure Arc 來實現對雲端與內部佈署提供一致的治理與管理，Azure Arc 主要能夠在雲端介面管理虛擬機器、Kubernetes 叢集和資料庫，就像是在 Azure 中執行一樣，使用熟悉的 Azure 介面進行管理。<br>
 
- 如果您想要略過完整佈署操作，透過簡易的佈署完整體驗 Azure Stack HCI 完整功能，請前往 [Azure Stack HCI Sandbox](https://github.com/BrianHsing/Azure-Stack-HCI-Sandbox)<br>
+ 如果您想要略過完整佈署操作，透過簡易的佈署完整體驗 Azure Stack HCI 完整功能，請前往 [Azure Stack HCI Sandbox](https://github.com/BrianHsing/Azure-Stack-HCI-Sandbox)，此教學您可以略過Lab1 - Lab4，完成 Azure Stack HCI Sandbox 佈署後接續 Lab5 繼續練習<br>
 
  您大約需要花費 2 小時完成此 Lab，預計花費每小時台幣 38 元，透過手把手教學您將學會：<br>
  - 學會在 Azure 模擬內部部署 Azure Stack HCI 環境<br>
- - 學會操作 Windows Admin Center 來管理您的 Azure Stack HCI 叢集<br>
- - 學會 Azure Arc 與 Azure Stack HCI 整合設定、更新與監控<br>
- - 學會啟用額外的 Azure 混合式服務<br>
+ - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集<br>
+ - Azure Stack HCI 叢集與 Azure 混合式服務整合<br>
+ - 在 Azure Stack HCI 叢集上建立磁碟區與虛擬機器<br>
 
 ## 環境架構說明
  - 您要使用本篇實戰演練需要：<br>
