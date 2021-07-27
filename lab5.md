@@ -112,15 +112,7 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 
 ## 加入預覽通道 (option)
 
-加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本有以下好處：<br>
-  - 從 Azure 入口網站監視叢集<br>
-  - 使用 Gpu 搭配叢集 Vm<br>
-  - 動態 CPU 相容性模式<br>
-  - 儲存體精簡布建<br>
-  - 網路 ATC<br>
-  - 可調整的儲存體修復速度<br>
-  - 支援 AMD 處理器上的嵌套虛擬化<br>
-  - 核心軟重新開機<br>
+加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本獲得最新功能<br>
 
 - 確定您的主機作業系統版本號碼更新至 17784.1737 以上版本<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update5.png "update5")<br>
