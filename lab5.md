@@ -107,8 +107,8 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr4.png "asr4")<br>
 - 在右邊視窗選擇資源群組、復原保存庫後，點選設定<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr3.png "asr3")<br>
-- 點選此虛擬機器的詳細資料後就可以看到<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr2.png "asr2")<br>
+- 到 Azure 入口網站點選您所選的復原保存庫，在功能列選取已複寫的項目，點選下拉式選單複寫按鈕，選擇 Hyper-V 機器到 Azure<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr8.png "asr8")<br>
 
 ## 加入預覽通道 (option)
 
