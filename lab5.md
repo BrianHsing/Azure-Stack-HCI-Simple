@@ -109,10 +109,12 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr3.png "asr3")<br>
 - 到 Azure 入口網站點選您所選的復原保存庫，在功能列選取已複寫的項目，點選下拉式選單複寫按鈕，選擇 Hyper-V 機器到 Azure<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr8.png "asr8")<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr9.png "asr9")<br>
 
 ## 加入預覽通道 (option)
 
-加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本獲得最新功能<br>
+加入 Azure Stack HCI 版 preview，可以提前體驗新功能，升級成 21H2 版本獲得最新功能
+<br>
 
 - 確定您的主機作業系統版本號碼更新至 17784.1737 以上版本<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/update5.png "update5")<br>
