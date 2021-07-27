@@ -91,4 +91,4 @@ Azure Stack HCI 叢集佈署精靈分為 5 個部分，分別為：<br>
 - 登入後即可看到叢集管理畫面<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/cluster30.png "cluster30")<br>
 
-  前往[# Lab5 - 使用 Azure Storage account 設定雲端見證](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
+  前往[Lab5 - Azure Stack HCI 叢集初始設定](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab5.md)<br>
