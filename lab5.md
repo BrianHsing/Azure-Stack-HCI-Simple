@@ -103,11 +103,11 @@ Azure Stack HCI 必須在安裝後的30天內依據 Azure Online Services 條款
 
 此步驟一鍵設定災難復原設定保護，簡化在伺服器或叢集上複寫虛擬機器的佈署<br>
 
-- 在 Windows Admin Center 的 All connections 頁面，選擇主機節點<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc1")<br>
-- 在左邊功能列選擇 Azure Hybrid center，在右邊的頁面就可以看到 Azure Site Recovery，然後點選 Set up 按鈕<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr1.png "asr1")<br>
-- 右邊會出現 Set up host with Azure Site Recovery 視窗，選擇您的訂用帳戶與資源群組後，選擇新增 Recovery Services Vault，完成後，再次點選 Set up<br>
+- 在 Windows Admin Center 中，然後從左欄 Compute 功能列中選擇 Virtual machines，選擇您要的虛擬機器後，點選管理，點選使用 Azure Site Recovery 複製<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/arc1.png "arc6")<br>
+- 在右邊視窗選擇資源群組、復原保存庫後，點選設定<br>
+![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr1.png "asr3")<br>
+- 點選此虛擬機器的詳細資料後就可以看到<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/asr2.png "asr2")<br>
 
 ## 加入預覽通道 (option)

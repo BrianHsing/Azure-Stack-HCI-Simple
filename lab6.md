@@ -41,8 +41,6 @@
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm9.png "vm9")<br>
 - 進行安裝以及管理操作<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm10.png "vm10")<br>
-- 在 vm1 管理頁面選擇 Manage，選擇 Replicate using Azure Site Recovery 複寫您的虛擬機器至 Azure，如果此叢集有意外發生，可以選擇在 Azure 上復原您的虛擬機器<br>
-![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/vm11.png "vm11")<br>
-- 完成後可以在 Azure Recovery Services Vault 看到複寫狀況與拓樸<br>
+
 
 返回[透過 Azure VM 巢狀虛擬化實作 Azure-Stack-HCI](https://github.com/BrianHsing/Azure-Stack-HCI)<br>
