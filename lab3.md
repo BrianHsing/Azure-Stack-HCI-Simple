@@ -36,8 +36,8 @@ Lab3 主要是說明 Hyper-V 安裝 Azure Stack HCI OS 的操作步驟，主要�
   netsh interface ip set address "Ethernet 2" static 192.168.0.12 255.255.255.0 192.168.0.1
   netsh interface ip set dnsserver "Ethernet 2" static 192.168.0.4
 
-  netsh interface ip set address "Ethernet 2" static 192.168.0.13 255.255.255.0 192.168.0.1
-  netsh interface ip set dnsserver "Ethernet 2" static 192.168.0.4
+  netsh interface ip set address "Ethernet 3" static 192.168.0.13 255.255.255.0 192.168.0.1
+  netsh interface ip set dnsserver "Ethernet 3" static 192.168.0.4
   ````
   - AzSHCI-node2<br>
   ````
@@ -47,8 +47,8 @@ Lab3 主要是說明 Hyper-V 安裝 Azure Stack HCI OS 的操作步驟，主要�
   netsh interface ip set address "Ethernet 2" static 192.168.0.22 255.255.255.0 192.168.0.1
   netsh interface ip set dnsserver "Ethernet 2" static 192.168.0.4
 
-  netsh interface ip set address "Ethernet 2" static 192.168.0.23 255.255.255.0 192.168.0.1
-  netsh interface ip set dnsserver "Ethernet 2" static 192.168.0.4
+  netsh interface ip set address "Ethernet 3" static 192.168.0.23 255.255.255.0 192.168.0.1
+  netsh interface ip set dnsserver "Ethernet 3" static 192.168.0.4
   ````
 
   前往[Lab4 - 使用 Windows Admin Center 建立 Azure Stack HCI 叢集](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab4.md)<br>
