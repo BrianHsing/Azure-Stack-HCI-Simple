@@ -23,9 +23,9 @@ Lab2 主要做基礎建設的佈署，包含網域控制站、DHCP Server、Wind
   - WAC IP 設定為 192.168.0.5<br>
 ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/win10.png "win10")<br>
 
-## ADDS 虛擬機器安裝 AD DS、DHCP 角色
+## ADDS 虛擬機器安裝 AD DS、DHCP(option) 角色
 
-- 安裝 AD DS、DHCP 角色<br>
+- 安裝 AD DS、DHCP(option) 角色<br>
   - 開啟伺服器管理員，選擇新增角色與功能<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds1.png "adds1")<br>
   - Before you Begin、Installation Type、Server Selection，都直接點選下一步<br>
@@ -50,7 +50,7 @@ Lab2 主要做基礎建設的佈署，包含網域控制站、DHCP Server、Wind
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds15.png "adds15")<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/adds16.png "adds16")<br>
 
-- 設定 DHCP Server<br>
+- 設定 DHCP Server(option)<br>
   - 使用系統管理員登入 hci\Administrator<br>
   - 開啟伺服器管理員，點選 Complete DHCP configuration，並且都直接選擇下一步直到 close 按鈕結束<br>
   ![GITHUB](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/image/dhcp1.png "dhcp1")<br>
