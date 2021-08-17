@@ -85,4 +85,11 @@
     Set-VMProcessor -VMName AzSHCI-node1 -ExposeVirtualizationExtensions $true
     Set-VMProcessor -VMName AzSHCI-node2 -ExposeVirtualizationExtensions $true
   ````
+
+  - 啟用 Hyper-V VM 客體服務<br>
+  ````
+    # 啟用 Hyper-V VM 客體服務
+    Enable-VMIntegrationService -Name "Guest Service Interface" -VMName AzSHCI-node1
+    Enable-VMIntegrationService -Name "Guest Service Interface" -VMName AzSHCI-node2
+  ````
   前往[Lab2 - 佈署 ADDS、WAC 虛擬機器](https://github.com/BrianHsing/Azure-Stack-HCI/blob/main/lab2.md)<br>
